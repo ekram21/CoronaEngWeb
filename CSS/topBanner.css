@@ -1,0 +1,39 @@
+.topBanner{
+    width: 100%;
+    height: 90%;
+    position: relative;
+    display: inline-block;
+    background-size: cover;
+    background-image: url(https://www.filmhousecinema.com/sites/filmhousecinema.com/files/shows/2017/Mountain-3.jpg)
+}
+
+.topBannerOverlay{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgba(0,0,0,0.4);
+}
+
+.mainHeadingText{
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 4.5em;
+    margin-top: 20%;
+    font-weight: 700;
+}
+
+.mainSmallerText{
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-top: 0.5%;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
