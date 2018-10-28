@@ -35,6 +35,28 @@
     display: inline-block;
     font-size: 1.2em;
     font-weight: 100;
-    margin-top: 0.5%;
+    margin-top: 1%;
+    font-family: "Roboto Slab","Times New Roman",serif;
+}
+
+.seemoreCont{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+    margin-top:5%;
+    cursor: pointer;
+}
+
+.seemoreButton{
+    font-size: 0.8em;
+    color: white;
     font-family: "Roboto","Helvetica","Arial",sans-serif;
+    text-align: center;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 0.5em;
+    background-color: rgb(214,56,101);
 }
