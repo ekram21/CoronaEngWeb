@@ -15,7 +15,7 @@ body {
 
 .scrollingCardWrapper{
     background-color: white;
-    height: 200%;
+    height: 400%;
     width: 95%;
     z-index: 101;
     margin-top: -5%;
