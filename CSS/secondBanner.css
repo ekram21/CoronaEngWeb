@@ -1,0 +1,50 @@
+.secondBanner{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.mainSecondBannerText{
+    margin-top: 5%;
+    line-height: 1.6em;
+    font-size: 1.1em;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    color: rgba(0,0,0,0.4);
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    text-align: center;
+}
+
+.secondBannerIconCont{
+    width: 90%;
+    margin-left: 5%;
+    display: inline-block;
+    position: relative;
+    margin-top: 7%;
+}
+
+.IconCont{
+    width: 28%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.fa-align-justify, .fa-adjust, .fa-audible{
+    margin-top: 2%;
+    margin-bottom: 6%;
+    font-size: 3.5em;
+}
+
+.iconHeading{
+    font-size: 1.2em;
+    margin-bottom: 4%;
+}
+
+.iconDescrip{
+    color: rgba(0,0,0,0.4);
+}
