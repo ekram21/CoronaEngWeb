@@ -1,8 +1,9 @@
-li {
-    list-style-type: none;
-}
 
 /* navbar */
+
+nav li {
+    list-style-type: none;
+}
 
 nav {
     width: 100%;
