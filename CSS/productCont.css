@@ -1,6 +1,7 @@
 .productCont{
     padding-top: 5%;
-    height: 40%;
+    padding-bottom: 5%;
+    /* height: 40%; */
     width: 100%;
     display: inline-block;
     position: relative;
@@ -27,7 +28,7 @@
 
 .productCardCont{
     width: 90%;
-    height: 80%;
+    /* height: 80%; */
     position: relative;
     display: inline-block;
     margin-top: 5%;
@@ -36,7 +37,8 @@
 
 .productOuterCard{
     width: 33%;
-    height: 80%;
+    padding-bottom: 20px;
+    /* height: 80%; */
     display: inline-block;
     background-color: white;
     border-radius: 0.3em;
@@ -54,7 +56,7 @@
     background-size: cover;
     display: inline-block;
     box-shadow: 0 5px 15px -8px rgba(0,0,0,0.24), 0 8px 10px -5px rgba(0,0,0,0.2), 0 10px 10px -5px rgba(0,0,0,0.2);
-    background-image: url(https://i.ytimg.com/vi/dyXp9eQSt4E/maxresdefault.jpg);
+    /* background-image: url(https://i.ytimg.com/vi/dyXp9eQSt4E/maxresdefault.jpg); */
 }
 
 .itemHeading{
