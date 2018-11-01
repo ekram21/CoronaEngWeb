@@ -1,4 +1,15 @@
 window.addEventListener('scroll', function() {
+    let scrolledPx = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    let nav = document.getElementsByTagName('nav')[0];
+    
+    if (scrolledPx > 175) {
+        nav.className = 'solid-bg';
+        changeNavFontColor('grey');
+    } else {
+        nav.className = '';
+        changeNavFontColor('white');
+    }
+
     function changeNavFontColor(color) {
         let links = document.getElementById('main-navigation').getElementsByTagName('a');
         let dropDownButtons = document.getElementById('main-navigation').getElementsByTagName('button');
@@ -14,16 +25,5 @@ window.addEventListener('scroll', function() {
             let button = dropDownButtons[i];
             button.setAttribute('style', 'color: ' + color);
         }
-    }
-    
-    let scrolledPx = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    let nav = document.getElementsByTagName('nav')[0];
-    
-    if (scrolledPx > 200) {
-        nav.className = 'solid-bg';
-        changeNavFontColor('grey');
-    } else {
-        nav.className = '';
-        changeNavFontColor('white');
     }
 });
