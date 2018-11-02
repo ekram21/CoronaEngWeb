@@ -5,6 +5,7 @@
 consoleText(['Engineering, Procurement & Construction (EPC)'], 'text',['white']);
 
 function consoleText(words, id, colors) {
+    document.getElementById('console').innerHTML = '&#95;';
   if (colors === undefined) colors = ['#fff'];
   var visible = true;
   var con = document.getElementById('console');
@@ -35,7 +36,12 @@ function consoleText(words, id, colors) {
     } else if (letterCount === words[0].length + 1 && waiting === false) {
 
       //this sets the incremenet variable x to -1 so that letters are now erased sequentially
-      console.log('second else if')
+      console.log('finished displaying whole text');
+
+        //get rid of the underscore sign at the end
+        fullText = document.getElementById('console').innerHTML
+        document.getElementById('console').innerHTML = fullText.slice(0, -1);
+
       // waiting = true;
       // window.setTimeout(function() {
       //   x = -1;
