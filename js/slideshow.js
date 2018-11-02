@@ -5,6 +5,6 @@ $(document).ready(function () {
         dots: true,
         autoplay: true,
         infinite: true,
-        autoplaySpeed: 500,
+        autoplaySpeed: 1000,
     });
 });
