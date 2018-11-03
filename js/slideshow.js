@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
     $('.Slideshow').slick({
         dots: true,
@@ -28,4 +27,11 @@ $(document).ready(function () {
             consoleText(['High Quality Circuit Protection'], 'text', ['white']);
         }
     });
+
+    hideRightArrowButton();
 });
+
+function hideRightArrowButton() {
+    let rightArrowButton = document.getElementsByClassName('slick-next')[0];
+    rightArrowButton.setAttribute('style', 'display: none');
+}
