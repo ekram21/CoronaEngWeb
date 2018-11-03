@@ -21,7 +21,7 @@ nav {
 
 nav .container {
     display: flex;
-    width: 70vw;
+    width: 90%;
 }
 
 #navbar-header {
@@ -29,7 +29,6 @@ nav .container {
     justify-content: center;
     align-items: center;
     /* color: white; */
-    font-weight: bold;
     font-size: 1.5em;
 }
 
@@ -51,11 +50,20 @@ nav .container {
     margin-left: auto;
 }
 
-#main-navigation li {
-    margin-right: 15px;
+/* #main-navigation li {
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+
+#main-navigation button,
+#main-navigation a {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #main-navigation a {
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     color: white;
 }
@@ -96,6 +104,8 @@ nav .container {
     background-color: #ffffff;
     color: #323b40;
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: 100px;
 }
 
 .final__dropdown:hover .final__dropdown__menu {
@@ -106,8 +116,6 @@ nav .container {
     display: block;
     padding: 10px;
     text-decoration: none;
-    border-width: 0;
-    border-top: 1px solid #e0e0e0;
     color: grey !important;
 }
 
@@ -115,4 +123,50 @@ nav .container {
     background-color: #f0f0f0;
     color: #323b40;
 }
+
+/*  
+ *  Animations 
+ *  http://ianlunn.github.io/Hover/
+ */
+
+ .hvr-shutter-out-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    /* background: #e1e1e1; */
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-shutter-out-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+    color: white;
+  }
+  .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 
