@@ -30,6 +30,7 @@ p {
     text-align: center;
 }
 
+
 .newsletter-section .newsletter-body form {
     width: 30%;
     margin: 0 auto;
@@ -47,17 +48,7 @@ p {
     margin-left: 15px;
     padding-bottom: 5px;
     padding-left: 30px;
-
-
-
 }
-
-/* .newsletter-section i {
-    margin-right: 5px;
-} */
-
-
-
 
 
 .newsletter-section button {

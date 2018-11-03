@@ -48,7 +48,7 @@
 
 
 .scrollingCardWrapper .blog-section .blog img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: .8s;
     cursor: pointer;
     opacity: 0.8;
