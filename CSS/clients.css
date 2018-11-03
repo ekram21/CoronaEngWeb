@@ -1,0 +1,34 @@
+#clients {
+    display: flex;
+    justify-content: center;
+}
+
+.clientsContainer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-family: "Roboto Slab","Times New Roman",serif;
+    color: rgba(0,0,0,0.6);
+}
+
+.clientsContainer h3 {
+    color: rgb(150, 150, 150);
+}
+
+.client {
+    width: 18%;
+    padding: 10px;
+    color: grey;
+}
+
+.client img {
+    border-radius: 100px;
+    box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.client h3 {
+    color: rgb(92, 92, 92);
+}
