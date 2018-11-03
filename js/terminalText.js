@@ -36,7 +36,7 @@ function consoleText(words, id, colors) {
     } else if (letterCount === words[0].length + 1 && waiting === false) {
 
       //this sets the incremenet variable x to -1 so that letters are now erased sequentially
-      console.log('finished displaying whole text');
+      // console.log('finished displaying whole text');
 
         //get rid of the underscore sign at the end
         fullText = document.getElementById('console').innerHTML
