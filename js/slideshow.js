@@ -28,7 +28,7 @@ $(document).ready(function () {
             consoleText(['Power Transmission & Generation'], 'text', ['white']);
         }
         else if (nextSlide === 3) {
-            consoleText(['High Quality Circuit Protection'], 'text', ['white']);
+            consoleText(['High Quality Total Sub-Station Solutions'], 'text', ['white']);
         }
         else if (nextSlide === 4) {
             consoleText(['Innovative Software Development with Flexible Pricing'], 'text', ['white']);
