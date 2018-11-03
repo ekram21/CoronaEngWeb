@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
     $('.Slideshow').slick({
         dots: true,
@@ -36,6 +35,3 @@ function hideRightArrowButton() {
     let rightArrowButton = document.getElementsByClassName('slick-next')[0];
     rightArrowButton.setAttribute('style', 'display: none');
 }
-        autoplaySpeed: 1000,
-    });
-});
