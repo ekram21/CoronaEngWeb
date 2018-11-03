@@ -13,6 +13,10 @@ $(document).ready(function () {
     //event change when the slide changes
     // On before slide change
     $('.Slideshow').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+
+        //also need to reset the css of focused dots to null color
+        console.log($("button:focus"));
+
         console.log(nextSlide);
         if(nextSlide === 0){
             consoleText(['Low, Medium and High Voltage Switchgear'], 'text', ['white']);
@@ -25,6 +29,9 @@ $(document).ready(function () {
         }
         else if (nextSlide === 3) {
             consoleText(['High Quality Circuit Protection'], 'text', ['white']);
+        }
+        else if (nextSlide === 4) {
+            consoleText(['Innovative Software Development with Flexible Pricing'], 'text', ['white']);
         }
     });
 

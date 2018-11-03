@@ -169,11 +169,13 @@
 .slick-dots li button:focus
 {
     outline: none;
+    color: none;
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before
 {
-    opacity: 1;
+    opacity: 0.25;
+    color: white;
 }
 .slick-dots li button:before
 {
