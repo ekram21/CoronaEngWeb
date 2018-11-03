@@ -12,13 +12,20 @@
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/productCont.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/navBar.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/clients.css" />
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/terminalText.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/slideshow.css" />
 
+    <link rel="stylesheet" type="text/css" href="Library/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="Library/slick/slick-theme.css" />
+ 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
-    <!-- <script src="main.js"></script> -->
-</head>
+
+</head> 
 <body>
     <nav>
         <div class="container">
@@ -62,15 +69,29 @@
     </nav>
 
     <div class="topBanner">
+
         <div class="topBannerOverlay">
 
-            <span class="mainHeadingText">Corona Group</span>
-            <span class="mainSmallerText">Innovative and Reliable Engineering with Zero Compromises</span>
-
-            <div class="seemoreCont">
-                <span class="seemoreButton">SEE MORE</span>
+            <div class="Slideshow">
+                <div class="sItem"><img class="iItem" src="https://cdn.theatlantic.com/assets/media/img/sponsored/2015/11/power_grid_city_cropped/resp-main.jpg" alt=""></div>
+                <div class="sItem"><img class="iItem" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/BiabQyhAiu74iuvl/videoblocks-timelapse-of-electrical-switchgear-roomindustrial-electrical-switch-panel-on-plant-and-process-control-with-vintage-cold-tone-for-industrial-concept_bcs64-lb_thumbnail-full01.png" alt=""></div>
+                <div class="sItem"><img class="iItem" src="http://c1.peakpx.com/wallpaper/471/969/198/electric-electricity-building-builder-wallpaper.jpg" alt=""></div>
             </div>
+
         </div>
+
+        <!-- <div class="darkenOverlay"></div> -->
+
+        <span class="mainHeadingText">Corona Group</span>
+        <span class="mainSmallerText">
+            <span id='text'></span>
+            <div class='console-underscore' id='console'></div>
+        </span>
+
+        <div class="seemoreCont">
+            <span class="seemoreButton">SEE MORE</span>
+        </div>
+
     </div>
 
 
@@ -130,12 +151,16 @@
                         <li>Industrial UPS (Uninterruptible Power Supply) Solutions</li>
                         <li>Complete BMS and SCADA Solutions</li>
                     </ul>
+
+                    <p>
+                        These products are of the highest quality, having been tested in world-renowned European Institutions and hold esteemed certificates such as ISO, ASTA and KEMA. Here at Corona we strive to ensure that you <i>never</i> have to settle for anything less than the very best.
+                    </p>
                     
                     <p>
                         Our products and solutions portfolio is further complemented by a wide range of after sales services in engineering, construction and maintenance. Round the clock support is always present to be dispatched at a moments notice to fix any problems our customers may have.
                     </p>
 
-                    Corona Engineering Ltd has supplied 11KV and 33KV Sub-Stations and electrical systems to countless prestigious projects in Bangladesh. A small selection (with examples) has been in the fields of:
+                    Corona Engineering Ltd has supplied 11KV and 33KV Sub-Stations and electrical systems to countless prestigious projects in Bangladesh. A small selection (with examples) have been in the fields of:
 
                     <ul>
                         <li>Airports (Several TTA SubStations for Hazrat Shahjalal International Airport,Dhaka, Shah Amanat Airport, Chittagong, Osmani Airport, Sylhet)</li>
@@ -253,6 +278,11 @@
 
     </div>
     
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="Library/slick/slick.min.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/terminalText.js"></script>
+    <script src="js/slideshow.js"></script>
 </body>
 </html>
