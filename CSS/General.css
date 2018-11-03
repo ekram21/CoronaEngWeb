@@ -4,16 +4,21 @@ html {
     padding: 0 !important;
 }
 
-input, textarea, select, a { outline: none; }
+input,
+textarea,
+select,
+a {
+    outline: none;
+}
 
 
 body {
     margin: 0;
     height: 100%;
-    background-color: rgb(228,228,228);
+    background-color: rgb(228, 228, 228);
 }
 
-.scrollingCardWrapper{
+.scrollingCardWrapper {
     background-color: white;
     width: 95%;
     z-index: 101;
@@ -21,6 +26,6 @@ body {
     margin-left: 2.5%;
     display: inline-block;
     position: relative;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
     border-radius: 0.5%;
 }

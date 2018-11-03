@@ -1,0 +1,89 @@
+.scrollingCardWrapper .blog-section {
+    /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
+    /* font-display: "Roboto Slab", "Times New Roman", serif; */
+    padding: 35px 0px;
+    background-color: #FFFFFF;
+}
+
+.font-roman {
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+.font-sarif {
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+
+.scrollingCardWrapper .blog-section .flex-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scrollingCardWrapper .blog-section .flex-container .blog {
+
+    width: 31%;
+    margin: 0 auto;
+}
+
+.scrollingCardWrapper .blog-section .blog span {
+    font-size: 14px;
+}
+
+.scrollingCardWrapper .blog-section .blog h3 {
+
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.scrollingCardWrapper .blog-section img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+    transition: .8s;
+}
+
+
+.scrollingCardWrapper .blog-section .blog img:hover {
+    transform: scale(1.02);
+    transition: .8s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.scrollingCardWrapper .blog-section .headline {
+    text-align: center;
+}
+
+.scrollingCardWrapper .blog-section .headline span {
+    color: rgb(153, 153, 153);
+}
+
+.scrollingCardWrapper .blog-section .headline h1 {
+    font-weight: bold;
+
+}
+
+.scrollingCardWrapper .blog-section .flex-container .blog p {
+    text-align: justify;
+    text-justify: inter-word;
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+}
+
+.color-violet {
+    color: #A55CC0;
+}
+
+
+.color-blue {
+    color: #62CBDD;
+}
+
+.color-yellow {
+    color: #F69D9B;
+}

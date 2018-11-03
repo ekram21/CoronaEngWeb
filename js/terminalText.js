@@ -3,6 +3,7 @@
 
 // function([string1, string2],target id,[color1,color2])    
 consoleText(['Low, Medium and High Voltage Switchgear'], 'text',['white']);
+consoleText(['Engineering, Procurement & Construction (EPC)'], 'text',['white']);
 
 function consoleText(words, id, colors) {
     document.getElementById('console').innerHTML = '&#95;';
@@ -21,6 +22,7 @@ function consoleText(words, id, colors) {
       waiting = true;
       target.innerHTML = words[0].substring(0, letterCount)
 
+      console.log('Letter count was 0')
       window.setTimeout(function() {
         var usedColor = colors.shift();
         colors.push(usedColor);
@@ -36,6 +38,7 @@ function consoleText(words, id, colors) {
 
       //this sets the incremenet variable x to -1 so that letters are now erased sequentially
       // console.log('finished displaying whole text');
+      console.log('finished displaying whole text');
 
         //get rid of the underscore sign at the end
         fullText = document.getElementById('console').innerHTML
@@ -68,5 +71,16 @@ function consoleText(words, id, colors) {
 //       visible = true;
 //     }
 //   }, 400)
+  // window.setInterval(function() {
+  //   if (visible === true) {
+  //     con.className = 'console-underscore hidden'
+  //     visible = false;
+
+  //   } else {
+  //     con.className = 'console-underscore'
+
+  //     visible = true;
+  //   }
+  // }, 400)
 
 }
