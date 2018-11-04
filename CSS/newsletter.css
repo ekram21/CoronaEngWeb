@@ -16,8 +16,7 @@
     padding: 5% 0;
 }
 
-.scrollingCardWrapper .newsletter-section .newsletter-head h1,
-p {
+.scrollingCardWrapper .newsletter-section .newsletter-head h1 p {
     color: white;
     text-align: center;
 }
