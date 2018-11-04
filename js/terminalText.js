@@ -2,7 +2,7 @@
 
 
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Engineering, Procurement & Construction (EPC)'], 'text',['white']);
+consoleText(['Low, Medium and High Voltage Switchgear'], 'text',['white']);
 
 function consoleText(words, id, colors) {
     document.getElementById('console').innerHTML = '&#95;';
@@ -21,7 +21,6 @@ function consoleText(words, id, colors) {
       waiting = true;
       target.innerHTML = words[0].substring(0, letterCount)
 
-      console.log('Letter count was 0')
       window.setTimeout(function() {
         var usedColor = colors.shift();
         colors.push(usedColor);
@@ -58,16 +57,16 @@ function consoleText(words, id, colors) {
   }, 40)
 
 
-  // window.setInterval(function() {
-  //   if (visible === true) {
-  //     con.className = 'console-underscore hidden'
-  //     visible = false;
+//   window.setInterval(function() {
+//     if (visible === true) {
+//       con.className = 'console-underscore hidden'
+//       visible = false;
 
-  //   } else {
-  //     con.className = 'console-underscore'
+//     } else {
+//       con.className = 'console-underscore'
 
-  //     visible = true;
-  //   }
-  // }, 400)
+//       visible = true;
+//     }
+//   }, 400)
 
 }
