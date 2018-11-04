@@ -71,6 +71,17 @@
     font-size: 14px;
 }
 
+.scrollingCardWrapper .blog-section a {
+    white-space: nowrap;
+    text-decoration: none;
+    color: rgb(35, 82, 124);
+}
+
+.scrollingCardWrapper .blog-section a:hover {
+    color: rgb(233, 30, 99);
+}
+
+
 .color-violet {
     color: #A55CC0;
 }
