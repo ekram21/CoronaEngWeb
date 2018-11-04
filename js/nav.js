@@ -2,6 +2,7 @@ window.addEventListener('scroll', function() {
     let scrolledPx = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
     let nav = document.getElementsByTagName('nav')[0];
     
+    
     if (scrolledPx > 175) {
         nav.className = 'solid-bg';
         changeNavFontColor('grey');
@@ -13,7 +14,10 @@ window.addEventListener('scroll', function() {
     function changeNavFontColor(color) {
         let links = document.getElementById('main-navigation').getElementsByTagName('a');
         let dropDownButtons = document.getElementById('main-navigation').getElementsByTagName('button');
+        let mainBranding = document.getElementById('navbar-header').getElementsByTagName('a')[0];
 
+        mainBranding.setAttribute('style', 'color: ' + color);
+        
         // change font color of the a tags in the nav 
         for(let i = 0; i < links.length; i++) {
             let link = links[i];
