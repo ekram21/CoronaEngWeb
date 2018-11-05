@@ -1,0 +1,162 @@
+.get-in-touch-section {
+    background-image: url(../images/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.get-in-touch-section .font-roman {
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+.get-in-touch-section .font-arial {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.get-in-touch-section .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5% 0;
+}
+
+.get-in-touch-section .text-white {
+    color: white;
+}
+
+.get-in-touch-section .text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.get-in-touch-section .text-center {
+    text-align: center;
+}
+
+.get-in-touch-section .text-right {
+    text-align: right;
+}
+
+.get-in-touch-section .flex {
+    display: flex;
+}
+
+.get-in-touch-section .font-icon {
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+
+}
+
+.get-in-touch-section .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.get-in-touch-section .flex-container .col {
+    width: 30%;
+    margin: 0 auto;
+
+}
+
+.get-in-touch-section .find-us {
+    margin-left: 15%;
+}
+
+.get-in-touch-section .text-margin {
+    margin-left: 18%;
+}
+
+.get-in-touch-section .text-getintouch-margin {
+    margin-left: 14%;
+}
+
+/* Contact us section starts*/
+.get-in-touch-section .contact-us {
+    background-color: #fff;
+    padding-bottom: 12%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 5px;
+}
+
+
+
+.get-in-touch-section .contact-us .subject-input {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 5%;
+    margin-top: 5%;
+    padding-bottom: 2%;
+}
+
+.get-in-touch-section .contact-us .flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.get-in-touch-section .contact-us .flex-container2 .col2 {
+    width: 40%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 8%;
+    padding-bottom: 2%;
+}
+
+.get-in-touch-section .contact-us input {
+    border: none;
+}
+
+
+
+.get-in-touch-section .contact-us textarea {
+    border: none;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+::placeholder {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.get-in-touch-section .contact-us .text-area ::placeholder {
+    color: #000;
+    opacity: 0.79;
+    font-size: 13px;
+
+    /* Firefox */
+}
+
+.get-in-touch-section .contact-us .text-area {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    margin-top: 7%;
+}
+
+.get-in-touch-section .contact-us .button-class {
+    margin-right: 5%;
+}
+
+.get-in-touch-section .contact-us .button-class button {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 4% 6%;
+    margin-top: 8%;
+    background-color: #E91E63;
+}
+
+.get-in-touch-section .contact-us .button-class button:hover {
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+.get-in-touch-section .contact-us .headline {
+    background-color: #E91E63;
+    padding: 4% 5%;
+    color: white;
+    border-radius: 3px;
+    transform: translateY(-15px);
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
