@@ -83,7 +83,7 @@
 }
 
 .itemDescrip{
-    font-size: 1em;
+    font-size: 0.7em;
     color: rgba(0,0,0,0.5);
     width: 90%;
     margin-left: 5%;
@@ -91,4 +91,71 @@
     font-family: "Roboto Slab","Times New Roman",serif;
     font-weight: 300;
     line-height: 1.6;
+}
+
+/* Float Shadow */
+.hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0); */
+    -webkit-box-shadow: -1px 13px 13px -7px rgba(173,173,173,1);
+    -moz-box-shadow: -1px 13px 13px -7px rgba(173,173,173,1);
+    box-shadow: -1px 13px 13px -7px rgba(173,173,173,1);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
+    transition-delay: 0s;
+}
+
+.hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+
+.productOuterCard:hover img, .productOuterCard:focus img, .productOuterCard:active img {
+    -webkit-transform: translateY(-15px) scale(1.01);
+    transform: translateY(-15px) scale(1.01);
+    -webkit-box-shadow: -1px 13px 31px -3px rgba(173,173,173,1);
+    -moz-box-shadow: -1px 13px 31px -3px rgba(173,173,173,1);
+    box-shadow: -1px 13px 31px -3px rgba(173,173,173,1);
+}
+
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+.quotation {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: #3C4858;
+    font-weight: 100;
+    text-align: center;
+}
+
+.quotation i {
+    margin-left: 5px;
+    color: rgb(158, 158, 158);
 }
