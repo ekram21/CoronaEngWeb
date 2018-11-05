@@ -100,9 +100,9 @@
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0); */
-    -webkit-box-shadow: -1px 13px 13px -7px rgba(173,173,173,1);
-    -moz-box-shadow: -1px 13px 13px -7px rgba(173,173,173,1);
-    box-shadow: -1px 13px 13px -7px rgba(173,173,173,1);
+    -webkit-box-shadow: -1px 10px 15px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 15px -7px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 15px -7px rgba(0,0,0,0.75);
     position: relative;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -134,9 +134,9 @@
 .productOuterCard:hover img, .productOuterCard:focus img, .productOuterCard:active img {
     -webkit-transform: translateY(-15px) scale(1.01);
     transform: translateY(-15px) scale(1.01);
-    -webkit-box-shadow: -1px 13px 31px -3px rgba(173,173,173,1);
-    -moz-box-shadow: -1px 13px 31px -3px rgba(173,173,173,1);
-    box-shadow: -1px 13px 31px -3px rgba(173,173,173,1);
+    -webkit-box-shadow: -1px 10px 23px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 23px -4px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 23px -4px rgba(0,0,0,0.75);
 }
 
 .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
