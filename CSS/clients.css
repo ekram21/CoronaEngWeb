@@ -19,6 +19,8 @@
 
 #clientsContainer h3 { color: rgb(150, 150, 150); }
 
+/* #clientsContainerExpandable .client { display: none; } */
+
 .sh-button-container {
     display: flex;
     justify-content: flex-end;
