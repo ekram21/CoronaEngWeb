@@ -24,3 +24,16 @@ body {
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
     border-radius: 0.5%;
 }
+
+.show-hide-button {
+    background-color: transparent;
+    border: none;
+    margin-top: 2%;
+    font-size: 1.1em;
+    color: #D63865;
+}
+
+.show-hide-button:hover {
+    transition: color 0.5s ease 0s;
+    color: rgb(231, 133, 161);
+}

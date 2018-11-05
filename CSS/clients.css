@@ -1,21 +1,28 @@
-#clients {
+.clients-row {
     display: flex;
     justify-content: center;
 }
 
-.clientsContainer {
-    padding-top: 5%;
-    padding-bottom: 5%;
+#clientsContainer, #clientsContainerExpandable {
     width: 100%;
     display: inline-block;
     position: relative;
     text-align: center;
     font-family: "Roboto Slab","Times New Roman",serif;
     color: rgba(0,0,0,0.6);
+    padding-bottom: 5%;
 }
 
-.clientsContainer h3 {
-    color: rgb(150, 150, 150);
+#clientsContainer { padding-top: 5%; }
+
+/* #clientsContainerExpandable { padding-bottom: 5%; } */
+
+#clientsContainer h3 { color: rgb(150, 150, 150); }
+
+.sh-button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
 }
 
 .client {
@@ -29,6 +36,4 @@
     box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
 }
 
-.client h3 {
-    color: rgb(92, 92, 92);
-}
+.client h3 { color: rgb(92, 92, 92); }
