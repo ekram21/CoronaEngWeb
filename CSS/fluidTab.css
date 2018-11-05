@@ -5,7 +5,7 @@
       display: inline-block;
       margin-top: 3%;
       width: 100%;
-      font-family: "Roboto","Helvetica","Arial",sans-serif;
+      font-family: "Roboto Slab", "Times New Roman", serif;
     -webkit-font-smoothing: antialiased; 
   }
   
@@ -31,11 +31,11 @@
   }
   .companyTabChoice ul li {
     margin: 0 8% 0 0;
-    opacity: 0.4;
+    opacity: 0.6;
     transition: all 0.4s ease;
   }
   .companyTabChoice ul li:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .companyTabChoice ul li.companyTabChoiceLI_Active {
     opacity: 1;
