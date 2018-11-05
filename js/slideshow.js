@@ -15,9 +15,9 @@ $(document).ready(function () {
     $('.Slideshow').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
         //also need to reset the css of focused dots to null color
-        console.log($("button:focus"));
+        // console.log($("button:focus"));
 
-        console.log(nextSlide);
+        // console.log(nextSlide);
         if(nextSlide === 0){
             consoleText(['Low, Medium and High Voltage Switchgear'], 'text', ['white']);
         }

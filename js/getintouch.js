@@ -1,9 +1,9 @@
-function borderBottom() {
+function borderBottom1() {
     var b = document.getElementsByClassName("underline1");
     b[0].style.borderBottom = "1px solid #E91E63";
 };
 document.getElementsByClassName("underline1")[0].onclick = function () {
-    borderBottom();
+    borderBottom1();
 };
 
 
