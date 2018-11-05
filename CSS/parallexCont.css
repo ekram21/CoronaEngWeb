@@ -9,7 +9,7 @@
 }
 
 .parallexOverlay{
-    font-family: "Roboto Slab","Times New Roman",serif;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
     width: 100%;
     height: 100%;
     position: relative;
@@ -18,7 +18,7 @@
 }
 
 .CEL{
-    margin-top: 5%;
+    margin-top: 3%;
     margin-bottom: 5%;
 }
 
