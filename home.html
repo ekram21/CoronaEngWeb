@@ -32,6 +32,19 @@
     <link rel="stylesheet" href="CSS/newsletter.css">
     <link rel="stylesheet" href="CSS/blog.css">
     <link rel="stylesheet" href="CSS/getintouch.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBdAymy4RENXb4YaIDpTo4ub_-fiMidCBw",
+            authDomain: "kpr-chat-faef4.firebaseapp.com",
+            databaseURL: "https://kpr-chat-faef4.firebaseio.com",
+            projectId: "kpr-chat-faef4",
+            storageBucket: "kpr-chat-faef4.appspot.com",
+            messagingSenderId: "1082573174208"
+        };
+        firebase.initializeApp(config);
+    </script>
 
 </head>
 
@@ -160,16 +173,21 @@
                 <div class="TabChoiceCont">
                     <nav class="companyTabChoice">
                         <ul class="companyTabChoiceUL">
-                            <li class="companyTabChoiceLI_Active"><a class="companyChoiceLink" href="">Corona Engineering Ltd</a></li>
-                            <li class="companyTabChoiceLI"><a class="companyChoiceLink" href="">Corona Power Generation Ltd</a></li>
-                            <li class="companyTabChoiceLI"><a class="companyChoiceLink" href="">Corona Tech Solutions Ltd</a></li>
+                            <li class="companyTabChoiceLI_Active"><a class="companyChoiceLink" href="">Corona
+                                    Engineering Ltd</a></li>
+                            <li class="companyTabChoiceLI"><a class="companyChoiceLink" href="">Corona Power Generation
+                                    Ltd</a></li>
+                            <li class="companyTabChoiceLI"><a class="companyChoiceLink" href="">Corona Tech Solutions
+                                    Ltd</a></li>
                         </ul>
                     </nav>
                 </div>
 
                 <div class="CEL">
-                    <div class="CEL_Descrip">Corona Engineering Ltd. (CEL) is one of the leading electrical engineering companies in Bangladesh
-                        representing several global partners with whom we strive to bring the highest quality product home.
+                    <div class="CEL_Descrip">Corona Engineering Ltd. (CEL) is one of the leading electrical engineering
+                        companies in Bangladesh
+                        representing several global partners with whom we strive to bring the highest quality product
+                        home.
                         We provide complete solutions in the following fields:
 
                         <ul>
@@ -191,10 +209,14 @@
                             strive to ensure that you <i>never</i> have to settle for anything less than the very best.</p>
 
                         <p>Our product and solutions portfolio is further complemented by a wide range of after sales
-                            services in engineering, construction and maintenance. You will always have access to the very best support, capable of being dispatched at a moments notice to fix any problems you may have. We take considerable pride in the fact that any customer of ours will readily verify and backup this claim.</p>
+                            services in engineering, construction and maintenance. You will always have access to the
+                            very best support, capable of being dispatched at a moments notice to fix any problems you
+                            may have. We take considerable pride in the fact that any customer of ours will readily
+                            verify and backup this claim.</p>
 
                         Corona Engineering Ltd has supplied 11KV and 33KV Sub-Stations and electrical systems to
-                        a multitude of prestigious projects here in Bangladesh. A small selection (with examples) have been in
+                        a multitude of prestigious projects here in Bangladesh. A small selection (with examples) have
+                        been in
                         the fields of:
 
                         <ul>
@@ -204,12 +226,15 @@
                                 Shopping Mall, Japan Garden City Project and Tokyo Square Shopping Mall Project)</li>
                             <li>Office Complexes</li>
                             <li>Residential Apartments</li>
-                            <li>Industrial Complexes in Textiles, Ceramics, Glass Processing Plants, Chemicals, Cement Plant, Petrochemicals, Gas Processing
-                                Plants, Steel Plants, Hospitals, Pharmaceuticals, Hotels, Power Plants and more are added with each passing day.</li>
+                            <li>Industrial Complexes in Textiles, Ceramics, Glass Processing Plants, Chemicals, Cement
+                                Plant, Petrochemicals, Gas Processing
+                                Plants, Steel Plants, Hospitals, Pharmaceuticals, Hotels, Power Plants and more are
+                                added with each passing day.</li>
                         </ul>
 
                         <p>For a more complete list of our capabilities and our completed projects please refer to our
-                            <a style="color:white;" href="https://drive.google.com/file/d/1nZK0UhLzMH95sqIoJSbwW0-N8DD4MAcu/view" target="_blank">Company
+                            <a style="color:white;" href="https://drive.google.com/file/d/1nZK0UhLzMH95sqIoJSbwW0-N8DD4MAcu/view"
+                                target="_blank">Company
                                 Catalogue</a> </p>
                     </div>
                 </div>
@@ -651,6 +676,36 @@
 
                         </div>
 
+                        <div id="get-quotation-form" class="contact-us">
+                                <h1 class="text-center headline font-roman">Quotation</h1>
+                                <form>
+                                    <div class="flex-container2">
+                                        <div class="col2 underline1">
+                                            <input name="quote-form-name" type="text" placeholder="Your Name">
+                                        </div>
+                                        <div class="col2 underline2">
+                                            <input name="quote-form-email" type="email" placeholder="Your Email">
+                                        </div>
+                                    </div>
+                
+                                    <div class="text-area">
+                                        <textarea name="quote-form-msg" cols="37" rows="5" placeholder="Message"></textarea>
+                                    </div>
+
+                                    <div class="file-upload">
+                                        <div class="file-select">
+                                            <div class="file-select-button" id="fileName">Choose File</div>
+                                            <div class="file-select-name" id="noFile">No file chosen...</div> 
+                                            <input type="file" name="chooseFile" id="chooseFile" multiple>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="form-button-container" class="text-right button-class font-arial">
+                                        <button id="close-quote-form-button">CLOSE</button>
+                                        <button class="button">SEND MESSAGE</button>
+                                    </div>
+                                </form>
+                            </div>
                     </div>
                 </div>
             </div>
