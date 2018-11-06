@@ -26,11 +26,12 @@
     margin: 0;
     list-style: none;
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
   }
   .companyTabChoice ul li {
-    margin: 0 8% 0 0;
+    /* margin: 0 8% 0 0; */
     opacity: 0.6;
     transition: all 0.4s ease;
   }
@@ -40,9 +41,9 @@
   .companyTabChoice ul li.companyTabChoiceLI_Active {
     opacity: 1;
   }
-  .companyTabChoice ul li:last-child {
+  /* .companyTabChoice ul li:last-child {
     margin-right: 0;
-  }
+  } */
   .companyTabChoice ul li a {
     text-decoration: none;
     color: #fff;
