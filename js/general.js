@@ -28,9 +28,9 @@ $(document).ready(function() {
         deviceType = $(this).siblings('.itemHeading').text();
     });
     
-    $('#get-quotation-form form').submit(function(e) {
+    $('#quotation-submit-button').click(function(e) {
         e.preventDefault();
-        var formData = $(this).serializeArray();
+        var formData = $('#get-quotation-form form').serializeArray();
         var metaData = {};
         let filesUploaded = 0;
         let fileFormatRegex = /(\.pdf|\.doc|\.docx)$/i;
@@ -40,8 +40,15 @@ $(document).ready(function() {
         if (!files.length){
             $('#upload-state').text('You must select atleast 1 file for upload...');
             $('#upload-state').fadeIn('fast');
-        } 
+        }
+        else if (filesUploaded === files.length) {
+            $('#upload-state').text('Your files have been uploaded, we will get back to you soon!');
+            $('#get-quotation-form form').hide();
+            $('#quotation-submit-button').hide();
+        }
         else {
+            $('#upload-state').fadeOut('fast');
+
             for (var file of files) {
                 $('#upload-state').text('Uploading files...');
                 $('#upload-state').show();
@@ -61,11 +68,14 @@ $(document).ready(function() {
                                 $('#upload-state').text('Your files have been uploaded, we will get back to you soon!');
                                 $('#get-quotation-form form').hide();
                                 // $('#get-quotation-form').fadeOut('fast');
+                                $('#quotation-submit-button').hide();
                             }
                         }
                     );
-                } else
+                } else {
                     $('#upload-state').text('Only PDF and MS Word (doc/docx) files allowed');
+                    $('#upload-state').fadeIn('fast');
+                }
     
             }
         }
