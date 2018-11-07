@@ -32,6 +32,19 @@
     <link rel="stylesheet" href="CSS/newsletter.css">
     <link rel="stylesheet" href="CSS/blog.css">
     <link rel="stylesheet" href="CSS/getintouch.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBdAymy4RENXb4YaIDpTo4ub_-fiMidCBw",
+            authDomain: "kpr-chat-faef4.firebaseapp.com",
+            databaseURL: "https://kpr-chat-faef4.firebaseio.com",
+            projectId: "kpr-chat-faef4",
+            storageBucket: "kpr-chat-faef4.appspot.com",
+            messagingSenderId: "1082573174208"
+        };
+        firebase.initializeApp(config);
+    </script>
 
 </head>
 
@@ -824,6 +837,37 @@
 
                         </div>
 
+                        <div id="get-quotation-form" class="contact-us">
+                                <h1 class="text-center headline font-roman">Quotation</h1>
+                                <div id="upload-state">Message</div>
+                                <form>
+                                    <div class="flex-container2">
+                                        <div class="col2 underline1">
+                                            <input name="name" type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="col2 underline2">
+                                            <input name="email" type="email" placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                
+                                    <div class="text-area">
+                                        <textarea name="message" cols="37" rows="5" placeholder="Message"></textarea>
+                                    </div>
+
+                                    <div class="file-upload">
+                                        <div class="file-select">
+                                            <div class="file-select-button" id="fileName">Choose File</div>
+                                            <div class="file-select-name" id="noFile">No file chosen...</div> 
+                                            <input type="file" name="chooseFile" id="chooseFile" accept=".doc,.docx,.pdf" multiple>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                                <div id="form-button-container" class="text-right button-class font-arial">
+                                    <button id="close-quote-form-button">CLOSE <i class="fas fa-times"></i></button>
+                                    <button id="quotation-submit-button" class="button">REQUEST QUOTATION</button>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
