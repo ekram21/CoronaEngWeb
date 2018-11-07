@@ -217,7 +217,7 @@
 
 #form-button-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .disabled-button {
