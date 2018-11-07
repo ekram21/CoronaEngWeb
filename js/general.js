@@ -1,9 +1,17 @@
-$(document).ready(function() {
+jQuery.fn.visible = function() {
+    return this.css('visibility', 'visible');
+};
+
+jQuery.fn.invisible = function() {
+    return this.css('visibility', 'hidden');
+};
+
+$(document).ready(() => {
     makeSectionExpandable('#clientsContainerExpandable', '#show-more-clients', '#hide-clients', '#clientsContainer', '.client');
     makeSectionExpandable('#productCardExpandable', '#show-more-products', '#hide-products', '#productCont', '.productOuterCard');
-    var files = []
-    var deviceType = '';
-    var devTypesAlreadyRequested = [];
+    let files = []
+    let deviceType = '';
+    let devTypesAlreadyRequested = [];
     
     $('.quotation').click(function () {
         deviceType = $(this).siblings('.itemHeading').text();
@@ -16,7 +24,7 @@ $(document).ready(function() {
     });
     
     $('#chooseFile').change(e => {
-        var filename = $("#chooseFile").val();
+        let filename = $("#chooseFile").val();
         files = e.target.files;
         
         if (/^\s*$/.test(filename)) {
@@ -37,25 +45,25 @@ $(document).ready(function() {
     
     $('#get-quotation-form form').submit(function(e) {
         e.preventDefault();
-        $('#close-quote-form-button').hide();
-        $('#quotation-submit-button').prop('disabled', true);
+        $('#quotation-submit-button').prop('disabled', true).addClass('disabled-button');
         
-        var formData = $(this).serializeArray();
-        var metaData = {};
+        let formData = $(this).serializeArray();
+        let metaData = {};
         let filesUploaded = 0;
         let fileFormatRegex = /(\.pdf|\.doc|\.docx)$/i;
         
-        for (var entry of formData) metaData[entry.name] = entry.value;
+        for (let entry of formData) metaData[entry.name] = entry.value;
         
         if (!files.length){
             $('#upload-state').text('You must select atleast 1 file for upload...');
             $('#upload-state').fadeIn('fast');
+            $('#quotation-submit-button').prop('disabled', false).removeClass('disabled-button');
         }
         else {
-            $('#upload-state').text('Uploading files...');
-
-            for (var file of files) {                
-                var storageRef = firebase.storage().ref(deviceType + '/' + metaData.email + '_' + file.name);
+            $('#upload-state').text('Uploading files...').show();
+            $('#close-quote-form-button').invisible();
+            for (let file of files) {                
+                let storageRef = firebase.storage().ref(deviceType + '/' + metaData.email + '_' + file.name);
                 
                 if (fileFormatRegex.test(file.name)) {
                     storageRef.put(file, metaData).on(
@@ -69,12 +77,12 @@ $(document).ready(function() {
                             if (filesUploaded === files.length) {
                                 showUploadCompleteDialogue();
                                 devTypesAlreadyRequested.push(deviceType);
+                                $('#chooseFile').val('');
                             }
                         }
                     );
                 } else {
-                    $('#upload-state').text('Only PDF and MS Word (doc/docx) files allowed');
-                    $('#upload-state').fadeIn('fast');
+                    $('#upload-state').text('Only PDF and MS Word (doc/docx) files allowed').fadeIn('fast');
                 }
             }
         }
@@ -82,10 +90,10 @@ $(document).ready(function() {
 });
 
 function showUploadCompleteDialogue() {
-    $('#upload-state').text('Your files for have been uploaded, we will get back to you soon!');
+    $('#upload-state').text('Your files for have been uploaded, we will get back to you soon!').show();
     $('#get-quotation-form form').hide();
-    $('#quotation-submit-button').hide();
-    $('#close-quote-form-button').show();
+    $('#quotation-submit-button').hide().removeClass('disabled-button');
+    $('#close-quote-form-button').visible();
     $('#get-quotation-form').fadeIn('fast');
     $('#quotation-submit-button').prop('disabled', false);   
 }
@@ -93,8 +101,8 @@ function showUploadCompleteDialogue() {
 function resetAndDisplayRequestQuoteForm() {
     $('#upload-state').hide()
     $('#get-quotation-form form').show();
-    $('#quotation-submit-button').show();
-    $('#close-quote-form-button').show();
+    $('#quotation-submit-button').show().prop('disabled', false).removeClass('disabled-button');
+    $('#close-quote-form-button').visible();
     $('#get-quotation-form').fadeIn('fast');
 }
 
