@@ -1,11 +1,30 @@
-$(document).ready(function() {
+jQuery.fn.visible = function() {
+    return this.css('visibility', 'visible');
+};
+
+jQuery.fn.invisible = function() {
+    return this.css('visibility', 'hidden');
+};
+
+$(document).ready(() => {
     makeSectionExpandable('#clientsContainerExpandable', '#show-more-clients', '#hide-clients', '#clientsContainer', '.client');
     makeSectionExpandable('#productCardExpandable', '#show-more-products', '#hide-products', '#productCont', '.productOuterCard');
-    var files = []
-    var deviceType = '';
+    let files = []
+    let deviceType = '';
+    let devTypesAlreadyRequested = [];
+    
+    $('.quotation').click(function () {
+        deviceType = $(this).siblings('.itemHeading').text();
+        $('#get-quotation-form h1').text('Get Quotation for ' + deviceType + 'S');
 
+        if (devTypesAlreadyRequested.includes(deviceType)) {
+            showUploadCompleteDialogue();
+        } else
+            resetAndDisplayRequestQuoteForm();
+    });
+    
     $('#chooseFile').change(e => {
-        var filename = $("#chooseFile").val();
+        let filename = $("#chooseFile").val();
         files = e.target.files;
         
         if (/^\s*$/.test(filename)) {
@@ -23,37 +42,28 @@ $(document).ready(function() {
         $('#get-quotation-form').fadeOut('fast');
     });
     
-    $('.quotation').click(function() {
-        $('#get-quotation-form').fadeIn('fast');
-        deviceType = $(this).siblings('.itemHeading').text();
-    });
     
-    $('#quotation-submit-button').click(function(e) {
+    $('#get-quotation-form form').submit(function(e) {
         e.preventDefault();
-        var formData = $('#get-quotation-form form').serializeArray();
-        var metaData = {};
+        $('#quotation-submit-button').prop('disabled', true).addClass('disabled-button');
+        
+        let formData = $(this).serializeArray();
+        let metaData = {};
         let filesUploaded = 0;
         let fileFormatRegex = /(\.pdf|\.doc|\.docx)$/i;
-
-        for (var entry of formData) metaData[entry.name] = entry.value;
+        
+        for (let entry of formData) metaData[entry.name] = entry.value;
         
         if (!files.length){
             $('#upload-state').text('You must select atleast 1 file for upload...');
             $('#upload-state').fadeIn('fast');
-        }
-        else if (filesUploaded === files.length) {
-            $('#upload-state').text('Your files have been uploaded, we will get back to you soon!');
-            $('#get-quotation-form form').hide();
-            $('#quotation-submit-button').hide();
+            $('#quotation-submit-button').prop('disabled', false).removeClass('disabled-button');
         }
         else {
-            $('#upload-state').fadeOut('fast');
-
-            for (var file of files) {
-                $('#upload-state').text('Uploading files...');
-                $('#upload-state').show();
-                
-                var storageRef = firebase.storage().ref(deviceType + '/' + metaData.email + '_' + file.name);
+            $('#upload-state').text('Uploading files...').show();
+            $('#close-quote-form-button').invisible();
+            for (let file of files) {                
+                let storageRef = firebase.storage().ref(deviceType + '/' + metaData.email + '_' + file.name);
                 
                 if (fileFormatRegex.test(file.name)) {
                     storageRef.put(file, metaData).on(
@@ -65,22 +75,36 @@ $(document).ready(function() {
                             $('#upload-state').text(`${filesUploaded} out of ${files.length} files uploaded`);
         
                             if (filesUploaded === files.length) {
-                                $('#upload-state').text('Your files have been uploaded, we will get back to you soon!');
-                                $('#get-quotation-form form').hide();
-                                // $('#get-quotation-form').fadeOut('fast');
-                                $('#quotation-submit-button').hide();
+                                showUploadCompleteDialogue();
+                                devTypesAlreadyRequested.push(deviceType);
+                                $('#chooseFile').val('');
                             }
                         }
                     );
                 } else {
-                    $('#upload-state').text('Only PDF and MS Word (doc/docx) files allowed');
-                    $('#upload-state').fadeIn('fast');
+                    $('#upload-state').text('Only PDF and MS Word (doc/docx) files allowed').fadeIn('fast');
                 }
-    
             }
         }
     });
 });
+
+function showUploadCompleteDialogue() {
+    $('#upload-state').text('Your files for have been uploaded, we will get back to you soon!').show();
+    $('#get-quotation-form form').hide();
+    $('#quotation-submit-button').hide().removeClass('disabled-button');
+    $('#close-quote-form-button').visible();
+    $('#get-quotation-form').fadeIn('fast');
+    $('#quotation-submit-button').prop('disabled', false);   
+}
+
+function resetAndDisplayRequestQuoteForm() {
+    $('#upload-state').hide()
+    $('#get-quotation-form form').show();
+    $('#quotation-submit-button').show().prop('disabled', false).removeClass('disabled-button');
+    $('#close-quote-form-button').visible();
+    $('#get-quotation-form').fadeIn('fast');
+}
 
 function makeSectionExpandable(targetId, showButtonId, hideButtonId, mainSectionId, innerElement) {
     $(targetId).hide();

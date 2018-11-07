@@ -187,32 +187,40 @@
 }
 
 
+#get-quotation-form {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 0 15px 25px 15px;
+    transform: translateY(-50%) translateX(-50%);
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    z-index: 103;
+    display: none;
+    width: 25%;
+}
 
-/* Image Hover effects starts */
-/* Common css starts */
-.ourProductPortfolio-Section .view {
-    width: 90%;
-    height: 400px;
-    margin: 0 auto;
-    transform: translateY(-18px);
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
-    cursor: default;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    box-shadow: -1px 10px 23px -4px rgba(0, 0, 0, 0.75);
+#get-quotation-form h1 {
+    font-size: 18px;
+}
+
+/* #close-quote-form-button, #quotation-submit-button {
+    white-space: nowrap;
+} */
+
+#get-quotation-form .headline {
+    transform: translateY(-50%);
+}
 
 }
 
-.ourProductPortfolio-Section .view .mask {
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
+#form-button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.disabled-button {
+    background: #919191;
+    color: white;
 }
 
 .ourProductPortfolio-Section .view img {
@@ -314,6 +322,18 @@
 
 .ourProductPortfolio-Section .view-first:hover p {
     transition-delay: 0.1s;
+}
+
+#upload-state {
+    display: none;
+    text-align: center;
+    /* background-color: rgb(252, 55, 55); */
+    color: red;
+    padding: 15px 0 15px 0;
+    border-radius: 5px;
+    transform: translateY(-25%);
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
 }
 
 .ourProductPortfolio-Section .view-first:hover .info {
