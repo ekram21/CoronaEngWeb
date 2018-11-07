@@ -1,3 +1,12 @@
+.productCont .font-roman {
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+
+.productCont .font-arial {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
 .productCont {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -30,9 +39,7 @@
     width: 90%;
     height: 80%;
     position: relative;
-    display: inline-block;
-    margin-top: 5%;
-    margin-left: 7.5%;
+    margin: 0 auto;
 }
 
 .productOuterCard {
@@ -80,17 +87,33 @@
     font-weight: 900;
     font-family: "Roboto Slab", "Times New Roman", serif;
     margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .itemDescrip {
-    font-size: 0.7em;
+    font-size: 0.8em;
+
     color: rgba(0, 0, 0, 0.5);
     width: 90%;
     margin-left: 5%;
     text-align: left;
-    font-family: "Roboto Slab", "Times New Roman", serif;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 300;
     line-height: 1.6;
+}
+
+.itemDescrip p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.itemDescrip a {
+    text-decoration: none;
+    color: rgb(35, 82, 124);
+}
+
+.itemDescrip a:hover {
+    color: rgb(233, 30, 99);
 }
 
 /* Float Shadow */
@@ -100,17 +123,10 @@
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0); */
     -webkit-box-shadow: -1px 10px 15px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px 10px 15px -7px rgba(0, 0, 0, 0.75);
     box-shadow: -1px 10px 15px -7px rgba(0, 0, 0, 0.75);
     position: relative;
-    /* -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: all;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
-    transition-delay: 0s; */
     -webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
     -moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
     -o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
@@ -130,28 +146,25 @@
     opacity: 0;
     background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-    /* W3C */
     -webkit-transition-duration: 0.3s;
     -webkit-transition-property: all;
+
     -moz-transition-duration: 0.3s;
     -moz-transition-property: all;
+
     -o-transition-duration: 0.3s;
     -o-transition-property: all;
+
     -ms-transition-duration: 0.3s;
     -ms-transition-property: all;
+
     transition-duration: 0.3s;
     transition-property: all;
 }
 
-.productOuterCard:hover img, .productOuterCard:focus img, .productOuterCard:active img {
-    -webkit-transform: translateY(-15px) scale(1.01);
-    transform: translateY(-15px) scale(1.01);
-    -webkit-box-shadow: -1px 10px 23px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -1px 10px 23px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: -1px 10px 23px -4px rgba(0, 0, 0, 0.75);
-}
-
-.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+.hvr-float-shadow:hover:before,
+.hvr-float-shadow:focus:before,
+.hvr-float-shadow:active:before {
     opacity: 1;
     -webkit-transform: translateY(5px);
     -moz-transform: translateY(5px);
@@ -160,187 +173,149 @@
     transform: translateY(5px);
 }
 
-.quotation {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 20px;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    color: #3C4858;
-    font-weight: 100;
-    text-align: center;
-    cursor: pointer;
-}
-
 .quotation i {
-    margin-left: 5px;
-    color: rgb(158, 158, 158);
+    margin-left: 7px;
 }
 
 #productCardExpandable {
     margin-top: 0;
 }
 
-#show-more-products, #hide-products {
+#show-more-products,
+#hide-products {
     margin-top: 0;
 }
 
-/* #productCardExpandable .productOuterCard { display: none; } */
 
-#get-quotation-form {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    padding: 0 15px 25px 15px;
-    transform: translateY(-50%) translateX(-50%);
-    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-    z-index: 103;
-    /* display: none; */
-}
 
-#get-quotation-form .headline {
-    transform: translateY(-50%);
-}
-
-#close-quote-form-button {
-    background-color: transparent;
-    color: rgb(153, 153, 153);
-}
-
-#form-button-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.file-upload {
-    display: block;
-    text-align: center;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    padding-top: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.file-upload .file-select {
-    display: block;
-    border: 2px solid #dce4ec;
-    color: #34495e;
-    cursor: pointer;
-    height: 40px;
-    line-height: 40px;
-    text-align: left;
-    background: #FFFFFF;
+/* Image Hover effects starts */
+/* Common css starts */
+.ourProductPortfolio-Section .view {
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    transform: translateY(-18px);
     overflow: hidden;
     position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: -1px 10px 23px -4px rgba(0, 0, 0, 0.75);
+
 }
 
-.file-upload .file-select .file-select-button {
-    background: #dce4ec;
-    padding: 0 10px;
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-}
-
-.file-upload .file-select .file-select-name {
-    line-height: 40px;
-    display: inline-block;
-    padding: 0 10px;
-}
-
-.file-upload .file-select:hover {
-    border-color: rgb(252, 166, 195);
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload .file-select:hover .file-select-button {
-    background: rgb(252, 166, 195);
-    color: #FFFFFF;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload.active .file-select {
-    border-color: #E91E63;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload.active .file-select .file-select-button {
-    background: #E91E63;
-    color: #FFFFFF;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload .file-select input[type=file] {
-    z-index: 100;
-    cursor: pointer;
+.ourProductPortfolio-Section .view .mask {
+    width: 100%;
+    height: 400px;
     position: absolute;
-    /* height: 100%;
-    width: 100%; */
+    overflow: hidden;
     top: 0;
     left: 0;
-    opacity: 0;
-    filter: alpha(opacity=0);
 }
 
-.file-upload .file-select.file-select-disabled {
-    opacity: 0.65;
-}
-
-.file-upload .file-select.file-select-disabled:hover {
-    cursor: default;
+.ourProductPortfolio-Section .view img {
+    width: 100%;
+    height: 100%;
     display: block;
-    border: 2px solid #dce4ec;
-    color: #34495e;
-    cursor: pointer;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 5px;
-    text-align: left;
-    background: #FFFFFF;
-    overflow: hidden;
     position: relative;
 }
 
-.file-upload .file-select.file-select-disabled:hover .file-select-button {
-    background: #dce4ec;
-    color: #666666;
-    padding: 0 10px;
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-}
-
-.file-upload .file-select.file-select-disabled:hover .file-select-name {
-    line-height: 40px;
-    display: inline-block;
-    padding: 0 10px;
-}
-
-#upload-state {
-    display: none;
+.ourProductPortfolio-Section .view .hover-headline {
+    text-transform: uppercase;
+    color: #fff;
     text-align: center;
-    /* background-color: rgb(252, 55, 55); */
-    color: red;
-    padding: 15px 0 15px 0;
-    border-radius: 5px;
-    transform: translateY(-75%);
-    font-weight: 700;
-    font-family: "Roboto Slab", "Times New Roman", serif;
+    position: relative;
+    font-size: 17px;
+    padding: 25px 10px;
+    background: #000;
+    margin: 20px 0 0 0;
 }
 
-#chooseFile {
-    height: 100%;
-    width: 100%;
+.ourProductPortfolio-Section .view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 15% 2%;
+    text-align: center;
+}
+
+.ourProductPortfolio-Section .view .info {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10%;
+    padding: 12px 22px;
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+}
+
+.ourProductPortfolio-Section .view .info:hover {
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* common css ends */
+
+
+.ourProductPortfolio-Section .view-first img {
+    transition: all 0.2s linear;
+}
+
+.ourProductPortfolio-Section .view-first .mask {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+.ourProductPortfolio-Section .view-first .hover-headline {
+    transform: translateY(-100px);
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.ourProductPortfolio-Section .view-first p {
+    /* transform: translateY(50px); */
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.9s linear;
+    font-size: 14px;
+}
+
+.ourProductPortfolio-Section .view-first:hover img {
+    transform: scale(1.1, 1.1);
+}
+
+.ourProductPortfolio-Section .view-first .info {
+    transform: translateY(50px);
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.ourProductPortfolio-Section .view-first:hover .mask {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.ourProductPortfolio-Section .view-first:hover .hover-headline,
+.ourProductPortfolio-Section .view-first:hover p,
+.ourProductPortfolio-Section .view-first:hover a.info {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.ourProductPortfolio-Section .view-first:hover p {
+    transition-delay: 0.1s;
+}
+
+.ourProductPortfolio-Section .view-first:hover .info {
+    transition-delay: 0.2s;
 }
