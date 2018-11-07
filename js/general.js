@@ -3,7 +3,18 @@ $(document).ready(function() {
     makeSectionExpandable('#productCardExpandable', '#show-more-products', '#hide-products', '#productCont', '.productOuterCard');
     var files = []
     var deviceType = '';
+    var devTypesAlreadyRequested = [];
+    
+    $('.quotation').click(function () {
+        deviceType = $(this).siblings('.itemHeading').text();
+        $('#get-quotation-form h1').text('Get Quotation for ' + deviceType + 'S');
 
+        if (devTypesAlreadyRequested.includes(deviceType)) {
+            showUploadCompleteDialogue();
+        } else
+            resetAndDisplayRequestQuoteForm();
+    });
+    
     $('#chooseFile').change(e => {
         var filename = $("#chooseFile").val();
         files = e.target.files;
@@ -23,36 +34,27 @@ $(document).ready(function() {
         $('#get-quotation-form').fadeOut('fast');
     });
     
-    $('.quotation').click(function() {
-        $('#get-quotation-form').fadeIn('fast');
-        deviceType = $(this).siblings('.itemHeading').text();
-    });
     
-    $('#quotation-submit-button').click(function(e) {
+    $('#get-quotation-form form').submit(function(e) {
         e.preventDefault();
-        var formData = $('#get-quotation-form form').serializeArray();
+        $('#close-quote-form-button').hide();
+        $('#quotation-submit-button').prop('disabled', true);
+        
+        var formData = $(this).serializeArray();
         var metaData = {};
         let filesUploaded = 0;
         let fileFormatRegex = /(\.pdf|\.doc|\.docx)$/i;
-
+        
         for (var entry of formData) metaData[entry.name] = entry.value;
         
         if (!files.length){
             $('#upload-state').text('You must select atleast 1 file for upload...');
             $('#upload-state').fadeIn('fast');
         }
-        else if (filesUploaded === files.length) {
-            $('#upload-state').text('Your files have been uploaded, we will get back to you soon!');
-            $('#get-quotation-form form').hide();
-            $('#quotation-submit-button').hide();
-        }
         else {
-            $('#upload-state').fadeOut('fast');
+            $('#upload-state').text('Uploading files...');
 
-            for (var file of files) {
-                $('#upload-state').text('Uploading files...');
-                $('#upload-state').show();
-                
+            for (var file of files) {                
                 var storageRef = firebase.storage().ref(deviceType + '/' + metaData.email + '_' + file.name);
                 
                 if (fileFormatRegex.test(file.name)) {
@@ -65,10 +67,8 @@ $(document).ready(function() {
                             $('#upload-state').text(`${filesUploaded} out of ${files.length} files uploaded`);
         
                             if (filesUploaded === files.length) {
-                                $('#upload-state').text('Your files have been uploaded, we will get back to you soon!');
-                                $('#get-quotation-form form').hide();
-                                // $('#get-quotation-form').fadeOut('fast');
-                                $('#quotation-submit-button').hide();
+                                showUploadCompleteDialogue();
+                                devTypesAlreadyRequested.push(deviceType);
                             }
                         }
                     );
@@ -76,11 +76,27 @@ $(document).ready(function() {
                     $('#upload-state').text('Only PDF and MS Word (doc/docx) files allowed');
                     $('#upload-state').fadeIn('fast');
                 }
-    
             }
         }
     });
 });
+
+function showUploadCompleteDialogue() {
+    $('#upload-state').text('Your files for have been uploaded, we will get back to you soon!');
+    $('#get-quotation-form form').hide();
+    $('#quotation-submit-button').hide();
+    $('#close-quote-form-button').show();
+    $('#get-quotation-form').fadeIn('fast');
+    $('#quotation-submit-button').prop('disabled', false);   
+}
+
+function resetAndDisplayRequestQuoteForm() {
+    $('#upload-state').hide()
+    $('#get-quotation-form form').show();
+    $('#quotation-submit-button').show();
+    $('#close-quote-form-button').show();
+    $('#get-quotation-form').fadeIn('fast');
+}
 
 function makeSectionExpandable(targetId, showButtonId, hideButtonId, mainSectionId, innerElement) {
     $(targetId).hide();

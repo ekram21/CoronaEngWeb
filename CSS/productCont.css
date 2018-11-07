@@ -194,8 +194,17 @@
     transform: translateY(-50%) translateX(-50%);
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
     z-index: 103;
-    /* display: none; */
+    display: none;
+    width: 25%;
 }
+
+#get-quotation-form h1 {
+    font-size: 18px;
+}
+
+/* #close-quote-form-button, #quotation-submit-button {
+    white-space: nowrap;
+} */
 
 #get-quotation-form .headline {
     transform: translateY(-50%);
