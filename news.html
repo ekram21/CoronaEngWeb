@@ -33,7 +33,9 @@
     <link rel="stylesheet" href="CSS/newsletter.css">
     <link rel="stylesheet" href="CSS/blog.css">
     <link rel="stylesheet" href="CSS/getintouch.css">
-    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-database.js"></script>
+    
     <script>
         // Initialize Firebase
         var config = {
@@ -130,12 +132,10 @@
     <div class="scrollingCardWrapper">
         <div class="news-container">
             <div id="articleContainer">
-                <div class="newsHeading">News Title</div>
+                <!-- <div class="newsHeading">News Title</div>
                 <h5>November 7th, 2018</h5>
                 
                 <img class="news-image" src="images/blog1.jpg" alt="drone">
-                <!-- <div id="img-container">
-                </div> -->
     
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a 
                 piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard 
@@ -150,27 +150,15 @@
                 Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
                 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in 
                 their exact original form, accompanied by English versions from the 1914 translation by 
-                H. Rackham.</p>
+                H. Rackham.</p> -->
                 
-                <div class="article-footer">
+                <!-- <div class="article-footer">
                     For more information, please contact us.
-                </div>
+                </div> -->
             </div>
     
             <div id="recent-news">
                 <h2 class="font-slab">Recent News</h2>
-                <div class="recent-news-entry">
-                    <a href="/news.html#firebasekey"><i class="fas fa-bolt"></i> Test head line</a>
-                </div>
-                <div class="recent-news-entry">
-                    <a href="/news.html#firebasekey"><i class="fas fa-bolt"></i> Test head line</a>
-                </div>
-                <div class="recent-news-entry">
-                    <a href="/news.html#firebasekey"><i class="fas fa-bolt"></i> Test head line</a>
-                </div>
-                <div class="recent-news-entry">
-                    <a href="/news.html#firebasekey"><i class="fas fa-bolt"></i> Test head line</a>
-                </div>
             </div>
         </div>
 
@@ -257,6 +245,7 @@
     <script src="js/general.js"></script>
     <script src="js/getintouch.js"></script>
     <script src="js/fluidTab.js"></script>
+    <script src="js/news.js"></script>
 
 
 </body>
