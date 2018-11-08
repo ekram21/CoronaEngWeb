@@ -1,6 +1,10 @@
 var nav = $('.companyTabChoice');
 var line = $('<div />').addClass('line');
 
+//hide CPGL and CTSL TEXTS
+$('.CPGL').fadeOut('fast');
+$('.CTSL').fadeOut('fast');
+
 line.appendTo(nav);
 
 var active = nav.find('.companyTabChoiceLI_Active');
@@ -23,6 +27,24 @@ nav.find('ul li a').click(function(e) {
     nav.addClass('animate');
 
     var _this = $(this);
+
+    currentTab = _this.text().replace(/\s+/, "").split(' ')[0]; //either CoronEngineering or CoronaPower or CoronaTech
+
+    if (currentTab === 'CoronaEngineering'){
+      $('.CPGL').fadeOut('fast');
+      $('.CTSL').fadeOut('fast');
+      $('.CEL').fadeIn('slow');
+    }
+    else if (currentTab === 'CoronaPower'){
+      $('.CEL').fadeOut('fast');
+      $('.CTSL').fadeOut('fast');
+      $('.CPGL').fadeIn('slow');
+    }
+    else if (currentTab === 'CoronaTech'){
+      $('.CEL').fadeOut('fast');
+      $('.CPGL').fadeOut('fast');
+      $('.CTSL').fadeIn('slow');
+    }
 
     nav.find('ul li').removeClass('companyTabChoiceLI_Active');
 
@@ -58,4 +80,8 @@ nav.find('ul li a').click(function(e) {
     pos = position.left;
     wid = width;
   }
+
+
+
 });
+
