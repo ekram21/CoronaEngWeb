@@ -10,8 +10,17 @@
     padding: 5% 15%;
 }
 
-#articleContainer p {
-    text-align: justify;
+#articleContainer p, .article-footer {
+    /* text-align: justify; */
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.58;
+    letter-spacing: -.003e;
+    color: rgba(0,0,0,.84);
 }
 
 #articleContainer h5 {
@@ -19,7 +28,7 @@
 }
 
 .news-image {
-    width: 70%;
+    width: 80%;
 }
 
 .newsHeading {
@@ -30,4 +39,9 @@
     font-family: "Roboto Slab", "Times New Roman", serif;
     margin-bottom: 1.5%;
     text-align: center;
+}
+
+.article-footer {
+    border-top: 1px solid rgb(219, 217, 217);
+    padding: 20px;
 }
