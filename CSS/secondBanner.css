@@ -12,7 +12,7 @@
     display: inline-block;
     width: 50%;
     margin-left: 25%;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0,0,0,0.7);
     font-family: "Roboto","Helvetica","Arial",sans-serif;
     text-align: center;
 }
@@ -22,8 +22,8 @@
     margin-left: 5%;
     display: inline-block;
     position: relative;
-    margin-top: 7%;
-    margin-bottom: 6%;
+    margin-top: 4%;
+    margin-bottom: 3%;
 }
 
 .IconCont{
@@ -35,17 +35,20 @@
     margin-right: 2%;
 }
 
-.fa-align-justify, .fa-adjust, .fa-audible{
+.fa-handshake, .fa-check, .fa-phone{
     margin-top: 2%;
     margin-bottom: 6%;
     font-size: 3.5em;
 }
 
 .iconHeading{
-    font-size: 1.2em;
+    font-size: 2em;
+    font-style: bold;
     margin-bottom: 4%;
 }
 
 .iconDescrip{
-    color: rgba(0,0,0,0.4);
+    color: rgba(0,0,0,0.7);
+    text-align: left;
+    font-size: 1.1em;
 }
