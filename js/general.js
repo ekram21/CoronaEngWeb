@@ -16,7 +16,7 @@ $(document).ready(() => {
     $('.quotation').click(function (e) {
         e.preventDefault();
         deviceType = $(this).parents('.ourProductPortfolio-Section').siblings('.itemHeading').text();
-        $('#get-quotation-form h1').text('Request quote for' + deviceType);
+        $('#get-quotation-form h1').text(deviceType + ' QUERY');
         $('.productCont').addClass('item--blur');
 
         if (devTypesAlreadyRequested.includes(deviceType))

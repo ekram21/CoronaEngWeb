@@ -83,12 +83,13 @@
     font-family: "Roboto Slab", "Times New Roman", serif;
     margin-bottom: 2%;
     margin-top: 2%;
+    cursor:pointer;
 }
 
 .itemDescrip {
     font-size: 0.8em;
 
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.7);
     width: 90%;
     margin-left: 5%;
     text-align: left;
@@ -146,6 +147,7 @@
     border-radius: 5px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    cursor: pointer;
     box-shadow: -1px 10px 23px -4px rgba(0, 0, 0, 0.75);
 
 }
@@ -184,7 +186,7 @@
     font-size: 1em;
     position: relative;
     color: #fff;
-    padding: 10% 8%;
+    padding: 10% 6%;
     margin-bottom: 11%;
     text-align: center;
 }
