@@ -16,11 +16,12 @@ $(document).ready(() => {
     $('.quotation').click(function (e) {
         e.preventDefault();
         deviceType = $(this).parents('.ourProductPortfolio-Section').siblings('.itemHeading').text();
-        $('#get-quotation-form h1').text('Get Quotation for ' + deviceType + 'S');
+        $('#get-quotation-form h1').text('Request quote for' + deviceType);
+        $('.productCont').addClass('item--blur');
 
-        if (devTypesAlreadyRequested.includes(deviceType)) {
+        if (devTypesAlreadyRequested.includes(deviceType))
             showUploadCompleteDialogue();
-        } else
+        else
             resetAndDisplayRequestQuoteForm();
     });
     
@@ -41,6 +42,7 @@ $(document).ready(() => {
     $('#close-quote-form-button').click(e => {
         e.preventDefault();
         $('#get-quotation-form').fadeOut('fast');
+        $('.productCont').removeClass('item--blur');
     });
     
     
