@@ -13,8 +13,9 @@ $(document).ready(() => {
     let deviceType = '';
     let devTypesAlreadyRequested = [];
     
-    $('.quotation').click(function () {
-        deviceType = $(this).siblings('.itemHeading').text();
+    $('.quotation').click(function (e) {
+        e.preventDefault();
+        deviceType = $(this).parents('.ourProductPortfolio-Section').siblings('.itemHeading').text();
         $('#get-quotation-form h1').text('Get Quotation for ' + deviceType + 'S');
 
         if (devTypesAlreadyRequested.includes(deviceType)) {
