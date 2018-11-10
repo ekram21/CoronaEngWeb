@@ -1,0 +1,60 @@
+.Projects-Table .text-center {
+    text-align: center;
+}
+
+
+.Projects-Table {
+    overflow-x: auto;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.Projects-Table .Headline {
+    text-align: center;
+    background-color: #E91E63;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.5px;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.Projects-Table table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-radius: 6px;
+
+}
+
+.Projects-Table th,
+.Projects-Table td {
+    padding: 25px;
+    text-align: left;
+    /* padding: 20px 8px; */
+}
+
+.Projects-Table th {
+    background-color: #212529;
+    color: white;
+}
+
+.Projects-Table td a {
+    text-decoration: none;
+    color: rgb(35, 82, 124);
+}
+
+.Projects-Table td a:hover {
+    text-decoration: none;
+    color: #E91E63;
+}
+
+.Projects-Table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
