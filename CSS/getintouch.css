@@ -2,6 +2,8 @@
     background-image: url(../images/contact.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    line-height: 1.5;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 
@@ -16,6 +18,24 @@
 .get-in-touch-section .overlay {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 5% 0;
+}
+
+.get-in-touch-section .bottom-row {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 5%;
+    color: white;
+}
+
+.get-in-touch-section .bottom-row h5 {
+    font-family: "Roboto Slab", "Times New Roman", serif;
+    font-size: 1.3em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 .get-in-touch-section .text-white {
