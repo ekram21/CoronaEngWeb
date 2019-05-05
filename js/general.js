@@ -8,7 +8,7 @@ jQuery.fn.invisible = function() {
 
 $(document).ready(() => {
     makeSectionExpandable('#clientsContainerExpandable', '#show-more-clients', '#hide-clients', '#clientsContainer', '.client');
-    makeSectionExpandable('#productCardExpandable', '#show-more-products', '#hide-products', '#productCont', '.productOuterCard');
+    makeSectionExpandable('#show-more-products', '#hide-products', '#productCont', '.productOuterCard');
     let files = []
     let deviceType = '';
     let devTypesAlreadyRequested = [];
